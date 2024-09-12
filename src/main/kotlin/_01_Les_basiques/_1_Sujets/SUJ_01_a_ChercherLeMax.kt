@@ -17,7 +17,13 @@ import _10_Demos_et_tests.testerEnLot
  */
 fun firstMax(list: List<Int>): List<Int> {
     var iMax = 0
-    // A COMPLETER ICI
+    var vMax = list[0]
+    for (value in list) {
+        if (value > vMax) {
+            vMax = value
+            iMax = list.indexOf(value)
+        }
+    }
     return  listOf(list[iMax], iMax)
 }
 
